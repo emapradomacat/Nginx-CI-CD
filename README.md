@@ -15,6 +15,9 @@ Consiste en construir una imagen de Docker que contenga el servidor NGINX con su
   - docker-compose.yml
   - Dockerfile
   - index.html
+  - .github/
+     - workflow/
+         - main.yml 
 
 
 ## Requisitos Previos
@@ -123,3 +126,4 @@ http://localhost:8080
 
 Este proyecto fue creado por Emanuel Prado Macat.
 Cualquier consulta a emapradomacat@gmail.com -
+
