@@ -50,7 +50,7 @@ git push -u origin main
 
 ## Despliegue Automatizado con CI/CD
 
-El despliegue automatizado se logra utilizando las acciones de workflow de GitHub. A continuación, se detallan los pasos necesarios para configurar el flujo de CI/CD.
+El despliegue automatizado se logra utilizando las acciones de workflow de GitHub. A continuación, se detallan los pasos necesarios para configurar el flujo de CI/CD desde tu consola local.
 1. Edita el siguiente archivo con tu editor de texto favorito
 ```
 vim .github/workflows/main.yml
