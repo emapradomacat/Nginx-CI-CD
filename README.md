@@ -102,7 +102,7 @@ jobs:
 ```
 docker pull tu-usuario/nombre-de-la-imagen:latest
 ```
-(*reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*)
+(*Reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*)
 
 2. Ejecuta el contenedor mapeando el puerto 8080 de tu máquina local al puerto 80 del contenedor:
 
