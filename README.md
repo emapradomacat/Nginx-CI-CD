@@ -5,7 +5,7 @@ Este proyecto tiene como objetivo implementar un flujo de CI/CD utilizando accio
 
 ## Descripción
 
-El proyecto consiste en construir una imagen de Docker que contenga el servidor NGINX con su correspondiente index.html predeterminado. Además, se implementará un pipeline utilizando las acciones de workflow de GitHub para automatizar la construcción y actualización de la imagen en DockerHub cada vez que se realice un cambio en el archivo index.html.
+Consiste en construir una imagen de Docker que contenga el servidor NGINX con su correspondiente index.html predeterminado. Además, se implementará un pipeline utilizando las acciones de workflow de GitHub para automatizar la construcción y actualización de la imagen en DockerHub cada vez que se realice un cambio en el archivo index.html.
 
 
 ## Estructura 
@@ -28,13 +28,13 @@ Asegúrate de tener instalado lo siguiente en tu entorno de desarrollo:
 
 ## Funcionamiento
 
-1. Inicializar git 
-```
-git init
-```
-2. Clonar el repositorio a nuestra área de trabajo
+1. Clonar el repositorio a nuestra área de trabajo
 ```
 git clone https://github.com/emapradomacat/Nginx-CI-CD.git
+```
+2. Inicializar git 
+```
+git init
 ```
 3. Abre el archivo index.html en el directorio raíz del proyecto y realiza los cambios deseados. Puedes personalizar el contenido de la página web según tus necesidades.
 4. Guarda los cambios y haz commit
@@ -98,15 +98,16 @@ jobs:
 
 ## Acceso y Uso de Imagen
 
-1. Una vez que el flujo de CI/CD se haya ejecutado correctamente, la nueva imagen de Docker se actualizará en DockerHub. Podrás acceder a ella utilizando el siguiente comando (*Reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*):
+1. Una vez que el flujo de CI/CD se haya ejecutado correctamente, la nueva imagen de Docker se actualizará en DockerHub. Podrás acceder a ella utilizando el siguiente comando:
 ```
 docker pull tu-usuario/nombre-de-la-imagen:latest
 ```
+(*reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*)
 
 2. Ejecuta el contenedor mapeando el puerto 8080 de tu máquina local al puerto 80 del contenedor:
 
 ```
-docker run --name Prueba -p 8080:80 -d emaprado22/cicd_craftech
+docker run --name Prueba -p 8080:80 -d tu-usuario/nombre-de-la-imagen:latest
 ```
 3. Finalmente podrás acceder a tu página web servida por el contenedor NGINX a través del puerto 8080.
 ```
