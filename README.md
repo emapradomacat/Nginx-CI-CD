@@ -51,17 +51,14 @@ git push -u origin main
 ## Despliegue Automatizado con CI/CD
 
 El despliegue automatizado se logra utilizando las acciones de workflow de GitHub. A continuación, se detallan los pasos necesarios para configurar el flujo de CI/CD.
-
 1. En el repositorio de GitHub, haz clic en la pestaña "Actions" y selecciona "Set up a workflow yourself" para crear un nuevo archivo de flujo de trabajo.
 2. Copia y pega el siguiente contenido en el archivo de flujo de trabajo (nombre-del-flujo.yml):
-
+```
 name: Docker Build & Push
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -82,8 +79,8 @@ jobs:
           context: .
           push: true
           tags: tu-usuario/nombre-de-la-imagen:latest
-
-*Asegúrate de reemplazar tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre deseado para la imagen de Docker en DockerHub.*
+```
+(*Asegúrate de reemplazar tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre deseado para la imagen de Docker en DockerHub.*)
 
 3. Guarda y sube el archivo de flujo de trabajo al repositorio.
 4. Configura los secrets en el repositorio:
@@ -101,11 +98,10 @@ jobs:
 
 ## Acceso y Uso de Imagen
 
-1. Una vez que el flujo de CI/CD se haya ejecutado correctamente, la nueva imagen de Docker se actualizará en DockerHub. Podrás acceder a ella utilizando el siguiente comando:
+1. Una vez que el flujo de CI/CD se haya ejecutado correctamente, la nueva imagen de Docker se actualizará en DockerHub. Podrás acceder a ella utilizando el siguiente comando (*Reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*):
 ```
 docker pull tu-usuario/nombre-de-la-imagen:latest
 ```
-*Reemplaza tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre de la imagen que has utilizado en el flujo de CI/CD.*
 
 2. Ejecuta el contenedor mapeando el puerto 8080 de tu máquina local al puerto 80 del contenedor:
 
