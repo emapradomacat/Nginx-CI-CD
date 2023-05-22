@@ -51,8 +51,11 @@ git push -u origin main
 ## Despliegue Automatizado con CI/CD
 
 El despliegue automatizado se logra utilizando las acciones de workflow de GitHub. A continuación, se detallan los pasos necesarios para configurar el flujo de CI/CD.
-1. En el repositorio de GitHub, haz clic en la pestaña "Actions" y selecciona "Set up a workflow yourself" para crear un nuevo archivo de flujo de trabajo.
-2. Copia y pega el siguiente contenido en el archivo de flujo de trabajo (nombre-del-flujo.yml):
+1. Edita el siguiente archivo con tu editor de texto favorito
+```
+vim .github/workflows/main.yml
+```
+2. Reemplazar tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre deseado para la imagen de Docker en DockerHub.
 ```
 name: Docker Build & Push
 on:
@@ -80,9 +83,9 @@ jobs:
           push: true
           tags: tu-usuario/nombre-de-la-imagen:latest
 ```
-(*Asegúrate de reemplazar tu-usuario y nombre-de-la-imagen con tu nombre de usuario y el nombre deseado para la imagen de Docker en DockerHub.*)
 
-3. Guarda y sube el archivo de flujo de trabajo al repositorio.
+
+3. Guarda los cambios y haz commit
 4. Configura los secrets en el repositorio:
    - En el repositorio de GitHub, ve a la pestaña "Settings".
    - En el menú lateral izquierdo, selecciona "Secrets".
@@ -120,4 +123,3 @@ http://localhost:8080
 
 Este proyecto fue creado por Emanuel Prado Macat.
 Cualquier consulta a emapradomacat@gmail.com -
-
