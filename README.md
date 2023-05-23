@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo implementar un flujo de CI/CD utilizando accio
 Consiste en construir una imagen de Docker que contenga el servidor NGINX con su correspondiente index.html predeterminado. Además, se implementará un pipeline utilizando las acciones de workflow de GitHub para automatizar la construcción y actualización de la imagen en DockerHub cada vez que se realice un cambio en el archivo index.html.
 
 
-## Estructura 
+## Estructura de Archivos
 
 - CI-CD/
   - README.md
