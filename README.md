@@ -114,6 +114,11 @@ docker pull tu-usuario/nombre-de-la-imagen:latest
 
 ```
 docker run --name Prueba -p 8080:80 -d tu-usuario/nombre-de-la-imagen:latest
+
+```
+Aquí podrás descargar mis imágenes, por si le quieres echar un vistazo:
+```
+docker run --name Prueba -p 8080:80 -d emaprado22/cicd_craftech   
 ```
 3. Finalmente podrás acceder a tu página web servida por el contenedor NGINX a través del puerto 8080.
 ```
