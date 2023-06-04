@@ -12,7 +12,6 @@ Consiste en construir una imagen de Docker que contenga el servidor NGINX con su
 
 - Nginx-CI-CD/
    - README.md
-   - docker-compose.yml
    - Dockerfile
    - index.html
    - .github/
